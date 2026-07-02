@@ -9,20 +9,12 @@ const fetchProducts = async () => {
   if (!res.ok) throw new Error('Error al cargar');
   return res.json();
 };
-const createCategory = async (data) => {
-  const res = await fetch('http://localhost:3000/api/categories', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  });
-  return res.json();
-};
 
 const createCategory = async (data) => {
   // Le decimos que use la variable de Vercel en producción, o el localhost si estás programando en tu PC
   const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000';
   
-  const res = await fetch(`${baseUrl}/api/products`), {
+  const res = await fetch(`${baseUrl}/api/products`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
