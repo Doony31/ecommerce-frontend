@@ -1,0 +1,10 @@
+ @import "tailwindcss";
+
+ /* Ocultar barra de scroll para el carrusel */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}
