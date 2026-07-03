@@ -15,9 +15,9 @@ const createCategory = async (data) => {
   const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000';
   
   const res = await fetch(`${baseUrl}/api/products`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(data),
   });
 
   if (!res.ok) throw new Error('Error al cargar');
